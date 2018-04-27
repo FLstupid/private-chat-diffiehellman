@@ -39,10 +39,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbPort = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rtbLog = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.pSend = new System.Windows.Forms.Panel();
             this.pMessage = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.pSend.SuspendLayout();
             this.pMessage.SuspendLayout();
@@ -89,7 +89,10 @@
             this.tbMsg.Name = "tbMsg";
             this.tbMsg.Size = new System.Drawing.Size(415, 20);
             this.tbMsg.TabIndex = 9;
+            this.tbMsg.Text = "Nhập tin nhắn vào đây";
+            this.tbMsg.Enter += new System.EventHandler(this.tbMsg_Enter);
             this.tbMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMsg_KeyDown);
+            this.tbMsg.Leave += new System.EventHandler(this.tbMsg_Leave);
             // 
             // btnSend
             // 
@@ -164,6 +167,30 @@
             this.panel1.Size = new System.Drawing.Size(203, 442);
             this.panel1.TabIndex = 20;
             // 
+            // rtbLog
+            // 
+            this.rtbLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbLog.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbLog.Location = new System.Drawing.Point(10, 166);
+            this.rtbLog.Name = "rtbLog";
+            this.rtbLog.ReadOnly = true;
+            this.rtbLog.Size = new System.Drawing.Size(185, 267);
+            this.rtbLog.TabIndex = 21;
+            this.rtbLog.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(5, 150);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Log:";
+            // 
             // pSend
             // 
             this.pSend.BackColor = System.Drawing.Color.Transparent;
@@ -187,30 +214,6 @@
             this.pMessage.Name = "pMessage";
             this.pMessage.Size = new System.Drawing.Size(532, 400);
             this.pMessage.TabIndex = 22;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Log:";
-            // 
-            // rtbLog
-            // 
-            this.rtbLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbLog.BackColor = System.Drawing.SystemColors.Control;
-            this.rtbLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbLog.Location = new System.Drawing.Point(10, 166);
-            this.rtbLog.Name = "rtbLog";
-            this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(185, 267);
-            this.rtbLog.TabIndex = 21;
-            this.rtbLog.Text = "";
             // 
             // ClientForm
             // 

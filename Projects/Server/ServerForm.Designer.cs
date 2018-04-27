@@ -33,16 +33,16 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.tbMsg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbHost = new System.Windows.Forms.TextBox();
             this.rtbMsg = new System.Windows.Forms.RichTextBox();
             this.btnListen = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPort = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pMessage = new System.Windows.Forms.Panel();
-            this.pSend = new System.Windows.Forms.Panel();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pMessage = new System.Windows.Forms.Panel();
+            this.pSend = new System.Windows.Forms.Panel();
+            this.cbHost = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.pMessage.SuspendLayout();
             this.pSend.SuspendLayout();
@@ -84,7 +84,10 @@
             this.tbMsg.Name = "tbMsg";
             this.tbMsg.Size = new System.Drawing.Size(446, 23);
             this.tbMsg.TabIndex = 22;
+            this.tbMsg.Text = "Nhập tin nhắn vào đây";
+            this.tbMsg.Enter += new System.EventHandler(this.tbMsg_Enter);
             this.tbMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMsg_KeyDown);
+            this.tbMsg.Leave += new System.EventHandler(this.tbMsg_Leave);
             // 
             // label1
             // 
@@ -97,14 +100,6 @@
             this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Host:";
-            // 
-            // tbHost
-            // 
-            this.tbHost.Location = new System.Drawing.Point(62, 9);
-            this.tbHost.Name = "tbHost";
-            this.tbHost.Size = new System.Drawing.Size(116, 20);
-            this.tbHost.TabIndex = 13;
-            this.tbHost.Text = "127.0.0.1";
             // 
             // rtbMsg
             // 
@@ -150,7 +145,7 @@
             // 
             this.tbPort.Location = new System.Drawing.Point(62, 46);
             this.tbPort.Name = "tbPort";
-            this.tbPort.Size = new System.Drawing.Size(116, 20);
+            this.tbPort.Size = new System.Drawing.Size(121, 20);
             this.tbPort.TabIndex = 30;
             this.tbPort.Text = "42018";
             // 
@@ -158,11 +153,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.cbHost);
             this.panel1.Controls.Add(this.rtbLog);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnListen);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.tbHost);
             this.panel1.Controls.Add(this.tbPort);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -170,6 +165,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 430);
             this.panel1.TabIndex = 32;
+            // 
+            // rtbLog
+            // 
+            this.rtbLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbLog.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbLog.Location = new System.Drawing.Point(7, 156);
+            this.rtbLog.Name = "rtbLog";
+            this.rtbLog.ReadOnly = true;
+            this.rtbLog.Size = new System.Drawing.Size(185, 267);
+            this.rtbLog.TabIndex = 33;
+            this.rtbLog.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(4, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Log:";
             // 
             // pMessage
             // 
@@ -196,30 +216,14 @@
             this.pSend.Size = new System.Drawing.Size(567, 45);
             this.pSend.TabIndex = 34;
             // 
-            // rtbLog
+            // cbHost
             // 
-            this.rtbLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbLog.BackColor = System.Drawing.SystemColors.Control;
-            this.rtbLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbLog.Location = new System.Drawing.Point(7, 156);
-            this.rtbLog.Name = "rtbLog";
-            this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(185, 267);
-            this.rtbLog.TabIndex = 33;
-            this.rtbLog.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(4, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Log:";
+            this.cbHost.FormattingEnabled = true;
+            this.cbHost.Location = new System.Drawing.Point(62, 8);
+            this.cbHost.Name = "cbHost";
+            this.cbHost.Size = new System.Drawing.Size(121, 21);
+            this.cbHost.TabIndex = 35;
+            this.cbHost.Text = "Chọn IP";
             // 
             // ServerForm
             // 
@@ -253,7 +257,6 @@
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox tbMsg;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbHost;
         private System.Windows.Forms.RichTextBox rtbMsg;
         private System.Windows.Forms.Button btnListen;
         private System.Windows.Forms.Label label2;
@@ -263,6 +266,7 @@
         private System.Windows.Forms.Panel pSend;
         private System.Windows.Forms.RichTextBox rtbLog;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbHost;
     }
 }
 

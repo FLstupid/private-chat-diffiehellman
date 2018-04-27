@@ -297,5 +297,15 @@ namespace TCPClient
             ChangeItemsWhenDisconnect();
             
         }
+
+        private void tbMsg_Enter(object sender, EventArgs e)
+        {
+            tbMsg.Text = "";
+        }
+
+        private void tbMsg_Leave(object sender, EventArgs e)
+        {
+            tbMsg.Text = "Nhập tin nhắn vào đây";
+        }
     }
 }

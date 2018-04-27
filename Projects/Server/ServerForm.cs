@@ -28,7 +28,6 @@ namespace TCPServer
         public enum Adder { Client, Server };
 
         private bool isConnected = false;
-        private readonly int _defaultPort = 42018;
         private readonly int _maxBuffer = 1024; //1024 Byte
         private bool isAccepted = false;
         Thread thdListener;
@@ -43,16 +42,15 @@ namespace TCPServer
         public void initIP() //auto get IPAddress's my computer
         {
             IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
-            string myIP = null;
+            
             foreach (IPAddress addr in host.AddressList)
             {
-                if (addr.AddressFamily.ToString() == "InterNetwork")
+                if (addr.AddressFamily == AddressFamily.InterNetwork)
                 {
-                    myIP = addr.ToString();
+                    cbHost.Items.Add(addr.ToString());
                 }
             }
-
-            ipe = new IPEndPoint(IPAddress.Parse(myIP), _defaultPort);
+            
         }
 
         private byte[] Serialize(MsgStruct msgStr)
@@ -145,33 +143,26 @@ namespace TCPServer
             try
             {
                 IPAddress ip;
-                if (IPAddress.TryParse(tbHost.Text.Trim(), out ip))
-                {
-                    ipe.Address = ip;
-                }
-                else
+                int port;
+                if (!IPAddress.TryParse(cbHost.SelectedItem.ToString(), out ip))
                 {
                     MessageBox.Show("IP không hợp lệ hoặc sai");
                     return false;
                 }
-
-                int Port;
-
-                if (Int32.TryParse(tbPort.Text.Trim(), out Port))
-                {
-                    if (Port <= 0 || Port >= 65535)
-                    {
-                        MessageBox.Show("Port không hợp lệ");
-                        return false;
-                    }
-                    ipe.Port = Port;
-                }
-                else
+                
+                if (!Int32.TryParse(tbPort.Text.Trim(), out port))
                 {
                     MessageBox.Show("Port không hợp lệ");
                     return false;
                 }
 
+                if (port <= 0 || port >= 65535)
+                {
+                    MessageBox.Show("Port không hợp lệ");
+                    return false;
+                }
+
+                ipe = new IPEndPoint(ip, port);
 
                 server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 thdListener = new Thread(new ThreadStart(Listener));
@@ -195,7 +186,7 @@ namespace TCPServer
                 {
                     if (isAccepted == false)
                     {
-                        
+
                         client = server.Accept();
                         isAccepted = true;
                         AddLog("Đã chấp nhận kết nối từ " + client.RemoteEndPoint.ToString());
@@ -278,8 +269,8 @@ namespace TCPServer
                     pMessage.Show();
                     btnListen.Enabled = false;
                     isConnected = true;
-                    tbHost.Enabled = false;
-                    tbHost.Enabled = false;
+                    cbHost.Enabled = false;
+                    tbPort.Enabled = false;
                     btnListen.Text = "Đang lắng nghe";
                     AddLog("Đã mở cổng " + tbPort.Text);
                 }
@@ -292,7 +283,7 @@ namespace TCPServer
             {
                 isConnected = false;
                 btnListen.Text = "Mở kết nối";
-                tbHost.Enabled = true;
+                cbHost.Enabled = true;
                 tbPort.Enabled = true;
                 thdListener.Abort();
                 server.Shutdown(SocketShutdown.Both);
@@ -310,9 +301,18 @@ namespace TCPServer
         private void ServerForm_Load(object sender, EventArgs e)
         {
             initIP();
-            tbHost.Text = ipe.Address.ToString();
             pSend.Hide();
             pMessage.Hide();
+        }
+
+        private void tbMsg_Leave(object sender, EventArgs e)
+        {
+            tbMsg.Text = "Nhập tin nhắn vào đây";
+        }
+
+        private void tbMsg_Enter(object sender, EventArgs e)
+        {
+            tbMsg.Text = "";
         }
     }
 }
