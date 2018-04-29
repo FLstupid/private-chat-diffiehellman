@@ -86,8 +86,6 @@
   <ItemGroup>
     <Content Include="Aha-Soft-Desktop-Device-Admin.ico" />
     <None Include="Resources\purple-background-wallpapers-3.jpg" />
-    <None Include="Resources\586354405-google-background-wallpaper.jpg" />
-    <None Include="Resources\button-connect-640.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MessageLib\MessageLib.csproj">

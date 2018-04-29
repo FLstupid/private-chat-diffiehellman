@@ -144,6 +144,15 @@ namespace TCPServer
             {
                 IPAddress ip;
                 int port;
+                try
+                {
+                    cbHost.SelectedItem.ToString();
+                } catch (Exception)
+                {
+                    MessageBox.Show("Vui lòng chọn IP", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                
                 if (!IPAddress.TryParse(cbHost.SelectedItem.ToString(), out ip))
                 {
                     MessageBox.Show("IP không hợp lệ hoặc sai");

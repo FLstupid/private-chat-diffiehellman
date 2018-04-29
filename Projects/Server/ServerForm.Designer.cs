@@ -38,11 +38,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbPort = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbHost = new System.Windows.Forms.ComboBox();
             this.rtbLog = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pMessage = new System.Windows.Forms.Panel();
             this.pSend = new System.Windows.Forms.Panel();
-            this.cbHost = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.pMessage.SuspendLayout();
             this.pSend.SuspendLayout();
@@ -117,10 +117,9 @@
             // 
             // btnListen
             // 
-            this.btnListen.BackColor = System.Drawing.Color.Transparent;
+            this.btnListen.BackColor = System.Drawing.Color.LimeGreen;
             this.btnListen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListen.ForeColor = System.Drawing.Color.Red;
-            this.btnListen.Image = global::Server.Properties.Resources.button_connect_640;
             this.btnListen.Location = new System.Drawing.Point(23, 84);
             this.btnListen.Name = "btnListen";
             this.btnListen.Size = new System.Drawing.Size(155, 43);
@@ -165,6 +164,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 430);
             this.panel1.TabIndex = 32;
+            // 
+            // cbHost
+            // 
+            this.cbHost.FormattingEnabled = true;
+            this.cbHost.Location = new System.Drawing.Point(62, 8);
+            this.cbHost.Name = "cbHost";
+            this.cbHost.Size = new System.Drawing.Size(121, 21);
+            this.cbHost.TabIndex = 35;
+            this.cbHost.Text = "Chọn IP";
             // 
             // rtbLog
             // 
@@ -215,15 +223,6 @@
             this.pSend.Name = "pSend";
             this.pSend.Size = new System.Drawing.Size(567, 45);
             this.pSend.TabIndex = 34;
-            // 
-            // cbHost
-            // 
-            this.cbHost.FormattingEnabled = true;
-            this.cbHost.Location = new System.Drawing.Point(62, 8);
-            this.cbHost.Name = "cbHost";
-            this.cbHost.Size = new System.Drawing.Size(121, 21);
-            this.cbHost.TabIndex = 35;
-            this.cbHost.Text = "Chọn IP";
             // 
             // ServerForm
             // 
