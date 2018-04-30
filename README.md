@@ -10,13 +10,13 @@ Sản phẩm được chia ra 2 phần là Server và Client với file thực t
 
 - Đầu tiên là chạy **Server.exe** lên ta có giao diện như sau:
 	
-
+	![Giao diện Server](https://github.com/arituan/private-chat-diffiehellman/raw/master/man-server.PNG)
 
 	Ta tiến hành chọn IP và Port để lắng nghe các kết nối từ phía client (Danh sách IP được tạo dựa vào các Interface network trên máy), Ở đây ta chọn IP 10.0.0.16 với port là 42018. Sau đó nhấn nút **Mở kết nối** để bắt đầu lắng nghe.
 
 - Tiếp theo khởi chạy file **Client.exe** ta được giao diện như hình sau:
 	
-	
+	![Giao diện Client](https://github.com/arituan/private-chat-diffiehellman/raw/master/man-client.PNG)
 
 	Điền IP và Port của Server và ấn **Kết nối**.
 	
@@ -24,13 +24,15 @@ Sản phẩm được chia ra 2 phần là Server và Client với file thực t
 	
 	Kết quả màn hình tại Server:
 	
+	![Kết quả tại Server](https://github.com/arituan/private-chat-diffiehellman/raw/master/server-capture.PNG)
+	
 	Kết quả màn hình tại Client:
 	
-	
+	![Kết quả tại Client](https://github.com/arituan/private-chat-diffiehellman/raw/master/client-capture.PNG)
 
 - Kết quả Wireshark bắt được:
 	
-	
+	![Kết quả Wireshark](https://github.com/arituan/private-chat-diffiehellman/raw/master/wireshark-capture.PNG)
 
 	Từ kết quả Wireshark bắt được, ta chỉ nhìn được cấu trúc của các message chứ không đọc được nội dung cụ thể bên trong, vì nó đã được mã hóa.
 
