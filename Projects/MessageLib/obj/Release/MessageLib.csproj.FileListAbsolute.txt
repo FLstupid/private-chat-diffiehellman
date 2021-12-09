@@ -1,0 +1,6 @@
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\MessageLib\bin\Release\MessageLib.dll
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\MessageLib\bin\Release\MessageLib.pdb
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\MessageLib\obj\Release\MessageLib.csproj.AssemblyReference.cache
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\MessageLib\obj\Release\MessageLib.csproj.CoreCompileInputs.cache
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\MessageLib\obj\Release\MessageLib.dll
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\MessageLib\obj\Release\MessageLib.pdb

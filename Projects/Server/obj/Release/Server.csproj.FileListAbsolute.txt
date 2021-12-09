@@ -1,0 +1,13 @@
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\bin\Release\Server.exe.config
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\bin\Release\Server.exe
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\bin\Release\Server.pdb
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\bin\Release\MessageLib.dll
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\bin\Release\MessageLib.pdb
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\obj\Release\Server.csproj.AssemblyReference.cache
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\obj\Release\TCPServer.ServerForm.resources
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\obj\Release\Server.Properties.Resources.resources
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\obj\Release\Server.csproj.GenerateResource.cache
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\obj\Release\Server.csproj.CoreCompileInputs.cache
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\obj\Release\Server.csproj.CopyComplete
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\obj\Release\Server.exe
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Server\obj\Release\Server.pdb

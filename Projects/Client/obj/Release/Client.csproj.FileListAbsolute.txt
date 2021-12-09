@@ -1,0 +1,5 @@
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Client\obj\Release\Client.csproj.AssemblyReference.cache
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Client\obj\Release\TCPClient.ClientForm.resources
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Client\obj\Release\Client.Properties.Resources.resources
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Client\obj\Release\Client.csproj.GenerateResource.cache
+D:\HK1-3\ATTT\private-chat-diffiehellman\Projects\Client\obj\Release\Client.csproj.CoreCompileInputs.cache
