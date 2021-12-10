@@ -54,9 +54,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(25, 11);
+            this.label4.Location = new System.Drawing.Point(33, 14);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.Size = new System.Drawing.Size(104, 17);
             this.label4.TabIndex = 24;
             this.label4.Text = "Các tin nhắn:";
             // 
@@ -67,9 +68,10 @@
             this.btnSend.BackColor = System.Drawing.Color.Chocolate;
             this.btnSend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSend.Image = ((System.Drawing.Image)(resources.GetObject("btnSend.Image")));
-            this.btnSend.Location = new System.Drawing.Point(480, 9);
+            this.btnSend.Location = new System.Drawing.Point(643, 11);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(70, 29);
+            this.btnSend.Size = new System.Drawing.Size(93, 36);
             this.btnSend.TabIndex = 23;
             this.btnSend.UseVisualStyleBackColor = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -80,9 +82,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMsg.Location = new System.Drawing.Point(28, 13);
+            this.tbMsg.Location = new System.Drawing.Point(37, 16);
+            this.tbMsg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMsg.Name = "tbMsg";
-            this.tbMsg.Size = new System.Drawing.Size(446, 23);
+            this.tbMsg.Size = new System.Drawing.Size(596, 27);
             this.tbMsg.TabIndex = 22;
             this.tbMsg.Text = "Nhập tin nhắn vào đây";
             this.tbMsg.Enter += new System.EventHandler(this.tbMsg_Enter);
@@ -95,9 +98,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(19, 12);
+            this.label1.Location = new System.Drawing.Point(25, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 14;
             this.label1.Text = "Host:";
             // 
@@ -107,12 +111,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbMsg.BackColor = System.Drawing.SystemColors.Control;
-            this.rtbMsg.Location = new System.Drawing.Point(28, 29);
+            this.rtbMsg.Location = new System.Drawing.Point(37, 36);
+            this.rtbMsg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbMsg.Name = "rtbMsg";
             this.rtbMsg.ReadOnly = true;
-            this.rtbMsg.Size = new System.Drawing.Size(522, 348);
+            this.rtbMsg.Size = new System.Drawing.Size(698, 428);
             this.rtbMsg.TabIndex = 26;
             this.rtbMsg.Text = "";
+            this.rtbMsg.TextChanged += new System.EventHandler(this.rtbMsg_TextChanged);
             this.rtbMsg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbMsg_KeyPress);
             // 
             // btnListen
@@ -120,9 +126,10 @@
             this.btnListen.BackColor = System.Drawing.Color.LimeGreen;
             this.btnListen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListen.ForeColor = System.Drawing.Color.Red;
-            this.btnListen.Location = new System.Drawing.Point(23, 84);
+            this.btnListen.Location = new System.Drawing.Point(31, 103);
+            this.btnListen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListen.Name = "btnListen";
-            this.btnListen.Size = new System.Drawing.Size(155, 43);
+            this.btnListen.Size = new System.Drawing.Size(207, 53);
             this.btnListen.TabIndex = 28;
             this.btnListen.Text = "Mở kết nối";
             this.btnListen.UseVisualStyleBackColor = false;
@@ -134,17 +141,19 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(19, 49);
+            this.label2.Location = new System.Drawing.Point(25, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 31;
             this.label2.Text = "Port:";
             // 
             // tbPort
             // 
-            this.tbPort.Location = new System.Drawing.Point(62, 46);
+            this.tbPort.Location = new System.Drawing.Point(83, 57);
+            this.tbPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPort.Name = "tbPort";
-            this.tbPort.Size = new System.Drawing.Size(121, 20);
+            this.tbPort.Size = new System.Drawing.Size(160, 22);
             this.tbPort.TabIndex = 30;
             this.tbPort.Text = "42018";
             // 
@@ -161,16 +170,18 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 430);
+            this.panel1.Size = new System.Drawing.Size(265, 529);
             this.panel1.TabIndex = 32;
             // 
             // cbHost
             // 
             this.cbHost.FormattingEnabled = true;
-            this.cbHost.Location = new System.Drawing.Point(62, 8);
+            this.cbHost.Location = new System.Drawing.Point(83, 10);
+            this.cbHost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbHost.Name = "cbHost";
-            this.cbHost.Size = new System.Drawing.Size(121, 21);
+            this.cbHost.Size = new System.Drawing.Size(160, 24);
             this.cbHost.TabIndex = 35;
             this.cbHost.Text = "Chọn IP";
             // 
@@ -181,10 +192,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbLog.BackColor = System.Drawing.SystemColors.Control;
             this.rtbLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbLog.Location = new System.Drawing.Point(7, 156);
+            this.rtbLog.Location = new System.Drawing.Point(9, 192);
+            this.rtbLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbLog.Name = "rtbLog";
             this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(185, 267);
+            this.rtbLog.Size = new System.Drawing.Size(245, 329);
             this.rtbLog.TabIndex = 33;
             this.rtbLog.Text = "";
             // 
@@ -193,9 +205,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(4, 140);
+            this.label3.Location = new System.Drawing.Point(5, 172);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 32;
             this.label3.Text = "Log:";
             // 
@@ -207,9 +220,10 @@
             this.pMessage.Controls.Add(this.rtbMsg);
             this.pMessage.Controls.Add(this.label4);
             this.pMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pMessage.Location = new System.Drawing.Point(200, 0);
+            this.pMessage.Location = new System.Drawing.Point(265, 0);
+            this.pMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pMessage.Name = "pMessage";
-            this.pMessage.Size = new System.Drawing.Size(567, 430);
+            this.pMessage.Size = new System.Drawing.Size(758, 529);
             this.pMessage.TabIndex = 33;
             // 
             // pSend
@@ -219,23 +233,25 @@
             this.pSend.Controls.Add(this.tbMsg);
             this.pSend.Controls.Add(this.btnSend);
             this.pSend.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pSend.Location = new System.Drawing.Point(200, 385);
+            this.pSend.Location = new System.Drawing.Point(265, 475);
+            this.pSend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pSend.Name = "pSend";
-            this.pSend.Size = new System.Drawing.Size(567, 45);
+            this.pSend.Size = new System.Drawing.Size(758, 54);
             this.pSend.TabIndex = 34;
             // 
             // ServerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackgroundImage = global::Server.Properties.Resources.purple_background_wallpapers_3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(767, 430);
+            this.ClientSize = new System.Drawing.Size(1023, 529);
             this.Controls.Add(this.pSend);
             this.Controls.Add(this.pMessage);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ServerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Server";

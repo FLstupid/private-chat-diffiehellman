@@ -323,5 +323,10 @@ namespace TCPServer
         {
             tbMsg.Text = "";
         }
+
+        private void rtbMsg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
