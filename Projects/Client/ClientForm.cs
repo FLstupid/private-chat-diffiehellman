@@ -201,7 +201,7 @@ namespace TCPClient
                 }
                 rtbMsg.AppendText("[" + DateTime.Now + "] " + msg);
                 rtbMsg.SelectionColor = Color.Gray;
-                rtbMsg.AppendText("-------------------------------------------------------------------------------------------------------------------------------------------------------------------" + Environment.NewLine);
+                rtbMsg.AppendText(Environment.NewLine);
                 rtbMsg.ScrollToCaret();
             }));
         }
@@ -211,7 +211,7 @@ namespace TCPClient
             rtbLog.Invoke(new MethodInvoker(delegate ()
             {
                 
-                rtbLog.AppendText("[" + DateTime.Now + "]" + Environment.NewLine + msg + Environment.NewLine + "-----------------------------------------------------------" + Environment.NewLine);
+                rtbLog.AppendText("[" + DateTime.Now + "]" + Environment.NewLine + msg + Environment.NewLine + Environment.NewLine);
                 rtbLog.ScrollToCaret();
             }));
         }
@@ -305,7 +305,17 @@ namespace TCPClient
 
         private void tbMsg_Leave(object sender, EventArgs e)
         {
-            tbMsg.Text = "Nhập tin nhắn vào đây";
+            tbMsg.Text = "Nhắn gì đó";
+        }
+
+        private void pSend_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pMessage_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

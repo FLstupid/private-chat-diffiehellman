@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="if_Messages_206461.ico" />
+    <None Include="Resources\br.jpg" />
     <None Include="Resources\33736444673_f5db283e02_o.jpg" />
   </ItemGroup>
   <ItemGroup>
