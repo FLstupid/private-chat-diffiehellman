@@ -11,7 +11,6 @@ using MessageLib;
 
 /*
  * Application name: TCP Chat with Diffie Hellman Exchange key & AES encryption
- * Author: Le Hoang Tuan - 15520967
  * Package name: server
  */
 
@@ -280,18 +279,18 @@ namespace TCPServer
                     isConnected = true;
                     cbHost.Enabled = false;
                     tbPort.Enabled = false;
-                    btnListen.Text = "Đang lắng nghe";
+                    btnListen.Text = "Listening";
                     AddLog("Đã mở cổng " + tbPort.Text);
                 }
                 else
                 {
-                    MessageBox.Show("Không thể mở kết nối");
+                    MessageBox.Show("Connection Fail");
                 }
             }
             else
             {
                 isConnected = false;
-                btnListen.Text = "Mở kết nối";
+                btnListen.Text = "Open Server";
                 cbHost.Enabled = true;
                 tbPort.Enabled = true;
                 thdListener.Abort();

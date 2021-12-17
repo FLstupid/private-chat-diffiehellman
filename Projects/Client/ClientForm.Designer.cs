@@ -73,6 +73,9 @@
             this.tbMsg.Size = new System.Drawing.Size(828, 34);
             this.tbMsg.TabIndex = 9;
             this.tbMsg.Text = "Nhập tin nhắn vào đây";
+            this.tbMsg.Enter += new System.EventHandler(this.tbMsg_Enter);
+            this.tbMsg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbMsg_KeyDown);
+            this.tbMsg.Leave += new System.EventHandler(this.tbMsg_Leave);
             // 
             // btnSend
             // 
@@ -87,14 +90,15 @@
             this.btnSend.Size = new System.Drawing.Size(112, 34);
             this.btnSend.TabIndex = 10;
             this.btnSend.UseVisualStyleBackColor = false;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // pMessage
             // 
             this.pMessage.BackColor = System.Drawing.Color.Transparent;
             this.pMessage.Controls.Add(this.rtbMsg);
             this.pMessage.Controls.Add(this.label4);
-            this.pMessage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pMessage.Location = new System.Drawing.Point(0, 114);
+            this.pMessage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pMessage.Location = new System.Drawing.Point(0, 125);
             this.pMessage.Margin = new System.Windows.Forms.Padding(4);
             this.pMessage.Name = "pMessage";
             this.pMessage.Size = new System.Drawing.Size(980, 359);
@@ -175,13 +179,14 @@
             // 
             this.btnConnect.BackColor = System.Drawing.Color.LimeGreen;
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.Location = new System.Drawing.Point(324, 35);
+            this.btnConnect.Location = new System.Drawing.Point(295, 35);
             this.btnConnect.Margin = new System.Windows.Forms.Padding(4);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(135, 44);
+            this.btnConnect.Size = new System.Drawing.Size(192, 44);
             this.btnConnect.TabIndex = 4;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = false;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // label3
             // 
@@ -206,7 +211,7 @@
             this.rtbLog.Margin = new System.Windows.Forms.Padding(4);
             this.rtbLog.Name = "rtbLog";
             this.rtbLog.ReadOnly = true;
-            this.rtbLog.Size = new System.Drawing.Size(420, 95);
+            this.rtbLog.Size = new System.Drawing.Size(420, 100);
             this.rtbLog.TabIndex = 21;
             this.rtbLog.Text = "";
             // 
@@ -220,13 +225,11 @@
             this.panel1.Controls.Add(this.tbHost);
             this.panel1.Controls.Add(this.tbPort);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pMessage);
-            this.panel1.Controls.Add(this.pSend);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(980, 544);
+            this.panel1.Size = new System.Drawing.Size(980, 125);
             this.panel1.TabIndex = 23;
             // 
             // ClientForm
@@ -237,6 +240,8 @@
             this.BackgroundImage = global::Client.Properties.Resources.br;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(980, 544);
+            this.Controls.Add(this.pSend);
+            this.Controls.Add(this.pMessage);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);

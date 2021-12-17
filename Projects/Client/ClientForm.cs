@@ -10,7 +10,6 @@ using MessageLib;
 using System.Security.Cryptography;
 /*
 * Application name: TCP Chat with Diffie Hellman Exchange key & AES encryption
-* Author: Le Hoang Tuan - 15520967
 * Package name: client
 */
 
@@ -49,7 +48,7 @@ namespace TCPClient
 
         private void ChangeItemsWhenConnect()
         {
-            btnConnect.Text = "Ngắt kết nối";
+            btnConnect.Text = "Disconnect";
             btnConnect.BackColor = Color.Silver;
             tbHost.Enabled = false;
             rtbMsg.Enabled = true;
@@ -60,7 +59,7 @@ namespace TCPClient
 
         private void ChangeItemsWhenDisconnect()
         {
-            btnConnect.Text = "Kết nối";
+            btnConnect.Text = "Connect";
             btnConnect.BackColor = Color.LimeGreen;
             tbHost.Enabled = true;
             rtbMsg.Enabled = false;
@@ -211,7 +210,7 @@ namespace TCPClient
             rtbLog.Invoke(new MethodInvoker(delegate ()
             {
                 
-                rtbLog.AppendText("[" + DateTime.Now + "]" + Environment.NewLine + msg + Environment.NewLine + Environment.NewLine);
+                rtbLog.AppendText("[" + DateTime.Now + "]" + Environment.NewLine + msg + Environment.NewLine);
                 rtbLog.ScrollToCaret();
             }));
         }
@@ -252,7 +251,7 @@ namespace TCPClient
                     key = DiffieHellman.DeriveKeyMaterial(CngKey.Import(msgStr.msg, CngKeyBlobFormat.EccPublicBlob));
                     //MessageBox.Show("Đã nhận key từ server");
                     AddLog("Đã nhận khóa từ server");
-                    SendMessage(" ", 0); //send pub key
+                    SendMessage(" ", 0); //send public key
                     ChangeItemsWhenConnect();
                     break;
                 case 1:
